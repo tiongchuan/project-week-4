@@ -1,9 +1,9 @@
 import React from 'react'
 import { View, Text, Image, TouchableOpacity } from 'react-native'
-import mainPic from '../assets/mainPic3.png'
-import styles from '../styles/myProfile.styles'
+import mainPic from '../assets/mainPic.png'
+import styles from '../styles/userProfile.styles'
 
-export const MyProfileScreen = ({ navigation }) => {
+export const UserProfileScreen = () => {
   return (
     <View style = { styles.container }>
       <Image style = { styles.img } source = { mainPic } />
