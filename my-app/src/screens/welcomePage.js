@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, Image, TouchableOpacity } from 'react-native'
-import mainPic from '../assets/mainPic3.png'
+import mainPic from '../assets/mainPic.png'
 import styles from '../styles/welcomePage.styles'
 
 export const WelcomeScreen = ({ navigation }) => {
