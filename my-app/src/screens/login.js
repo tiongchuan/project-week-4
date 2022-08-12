@@ -36,7 +36,7 @@ export const LoginScreen = ({ navigation }) => {
         <Text style = { styles.text }>Forgot password?</Text>
         <TouchableOpacity
           style = { styles.btn } 
-          onPress = {() => navigation.navigate( 'Login' )}
+          onPress = {() => navigation.navigate( 'Welcome' )}
           >
           <Text style = { styles.login }>Login</Text>
         </TouchableOpacity>
