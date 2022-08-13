@@ -17,7 +17,7 @@ export const WelcomeScreen = ({ navigation }) => {
         </TouchableOpacity>
         <TouchableOpacity 
           style = { styles.btn }
-          // onPress = {() => navigation.navigate( 'Login' )}
+          onPress = {() => navigation.navigate( 'Tutors' )}
         >
           <Text style = { styles.btnText }>Tutors listing</Text>
         </TouchableOpacity>
