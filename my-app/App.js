@@ -8,7 +8,7 @@ import { WelcomeScreen } from './src/screens/welcomePage';
 import { UserProfileScreen } from './src/screens/userProfile';
 import { TutorsListingScreen } from './src/screens/tutorsListing';
 import { TutorsProfileScreen } from './src/screens/tutorsProfile';
-
+import { MyActivityScreen } from './src/screens/myActivity';
 
 const Stack = createNativeStackNavigator()
 
@@ -23,6 +23,7 @@ export default function App() {
         <Stack.Screen name = 'My profile' component = { UserProfileScreen }/>
         <Stack.Screen name = 'Tutors' component = { TutorsListingScreen }/>
         <Stack.Screen name = 'Tutors profile' component = { TutorsProfileScreen }/>
+        <Stack.Screen name = 'My Activity' component = { MyActivityScreen }/>
       </Stack.Navigator>
       <StatusBar />
     </NavigationContainer>
