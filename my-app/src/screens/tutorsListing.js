@@ -12,7 +12,7 @@ export const TutorsListingScreen = ({ navigation }) => {
         <View style = {styles.listings }>
           <TouchableOpacity
             style = { styles.listing }
-            onPress = {() => navigation.navigate( 'Tutors profile' )}>
+            onPress = {() => navigation.navigate( 'Tutor profile' )}>
             <Image style = { styles.img } source = { profileImg }/>
             <View>
               <Text style = { styles.text1 }>Wilson Ong</Text>
@@ -22,7 +22,7 @@ export const TutorsListingScreen = ({ navigation }) => {
           </TouchableOpacity>
           <TouchableOpacity 
             style = { styles.listing }
-            onPress = {() => navigation.navigate( 'Tutors profile' )}>
+            onPress = {() => navigation.navigate( 'Tutor profile' )}>
             <Image style = { styles.img } source = { profileImg }/>
             <View>
               <Text style = { styles.text1 }>TC Ong</Text>
@@ -32,7 +32,7 @@ export const TutorsListingScreen = ({ navigation }) => {
           </TouchableOpacity>
           <TouchableOpacity 
             style = { styles.listing }
-            onPress = {() => navigation.navigate( 'Tutors profile' )}>
+            onPress = {() => navigation.navigate( 'Tutor profile' )}>
             <Image style = { styles.img } source = { profileImg }/>
             <View>
               <Text style = { styles.text1 }>Valerie Lim</Text>
@@ -42,7 +42,7 @@ export const TutorsListingScreen = ({ navigation }) => {
           </TouchableOpacity>
           <TouchableOpacity 
             style = { styles.listing }
-            onPress = {() => navigation.navigate( 'Tutors profile' )}>
+            onPress = {() => navigation.navigate( 'Tutor profile' )}>
             <Image style = { styles.img } source = { profileImg }/>
             <View>
               <Text style = { styles.text1 }>Mia Kim</Text>
@@ -52,7 +52,7 @@ export const TutorsListingScreen = ({ navigation }) => {
           </TouchableOpacity>
           <TouchableOpacity 
             style = { styles.listing }
-            onPress = {() => navigation.navigate( 'Tutors profile' )}>
+            onPress = {() => navigation.navigate( 'Tutor profile' )}>
             <Image style = { styles.img } source = { profileImg }/>
             <View>
               <Text style = { styles.text1 }>Thomas Yeo</Text>
