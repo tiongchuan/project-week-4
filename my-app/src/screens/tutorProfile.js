@@ -1,9 +1,9 @@
 import React from 'react'
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import profileImg from '../assets/profileImg.jpg'
-import styles from '../styles/tutorsProfile.styles'
+import styles from '../styles/tutorProfile.styles'
 
-export const TutorsProfileScreen = () => {
+export const TutorProfileScreen = ({ navigation }) => {
   return (
     <View style = { styles.container }>
       <Image style = { styles.img } source = { profileImg } />
@@ -16,9 +16,9 @@ export const TutorsProfileScreen = () => {
       
       <TouchableOpacity 
         style = { styles.btn }
-        // onPress = {() => navigation.navigate( 'My profile' )}
+        onPress = {() => navigation.navigate( 'Request Tutor' )}
       >
-        <Text style = { styles.btnText }>Book</Text>
+        <Text style = { styles.btnText }>Request</Text>
       </TouchableOpacity>
     </View>
   )

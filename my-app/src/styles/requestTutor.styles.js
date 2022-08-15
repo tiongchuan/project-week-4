@@ -9,24 +9,35 @@ module.exports = StyleSheet.create ({
     backgroundColor: '#FFFFFF'
     //justifyContent: 'center',
   },
-  img: {
-    height: height * 0.4,
-    width: width * 0.85,
-    resizeMode: 'contain',
-    top: height * 0.06,
+  text: {
+
   },
-  btnContainer: {
-    position: 'absolute',
-    top: height * 0.6,
+  inputContainer: {
+    //backgroundColor: 'red',
+    alignItems: 'center',
+    top: height * 0.15,
+  },
+  input: {
+    justifyContent: 'center',
+    textAlign: 'center',
+    height: height * 0.3,
+    width: width * 0.75,
+    margin: 10,
+    borderWidth: 1,
+    padding: 10,
+    fontSize: 16,
+    borderRadius: 20,
+    backgroundColor: '#F5F5F5',
+    borderColor: 'rgba(219, 219, 219, 0.2)',
   },
   btn: {
     height: height * 0.06,
     width: width * 0.35,
     backgroundColor: '#C52126',
+    borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    margin: 10,
-    borderRadius: 20,
+    marginTop: 150,
   },
   btnText: {
     color: 'white',

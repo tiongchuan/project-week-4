@@ -7,7 +7,7 @@ export const MainScreen = ({ navigation }) => {
   return (
     <View style = { styles.container }>
       <Image style = { styles.img } source = { mainPic } />
-      <View style = {styles.btns }>
+      <View style = { styles.btnContainer }>
         <TouchableOpacity 
           style = { styles.btn }
           onPress = {() => navigation.navigate( 'Sign Up' )}>
