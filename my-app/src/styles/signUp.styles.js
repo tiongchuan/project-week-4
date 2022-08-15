@@ -16,13 +16,13 @@ module.exports = StyleSheet.create ({
   },
   img: {
     //backgroundColor: 'blue',
-    height: height * 0.4,
+    height: height * 0.2,
     width: width * 0.85,
     resizeMode: 'contain',
     top: height * 0.06,
   },
   inputContainer: {
-    //backgroundColor: 'red',
+    // backgroundColor: 'red',
     alignItems: 'center',
     top: height * 0.06,
   },
@@ -31,7 +31,7 @@ module.exports = StyleSheet.create ({
     textAlign: 'center',
     height: height * 0.06,
     width: width * 0.75,
-    margin: 10,
+    margin: 5,
     borderWidth: 1,
     padding: 10,
     fontSize: 16,
@@ -39,10 +39,18 @@ module.exports = StyleSheet.create ({
     backgroundColor: '#F5F5F5',
     borderColor: 'rgba(219, 219, 219, 0.2)',
   },
-  text: {
-    color: 'gray',
-    fontSize: 12,
+  toggle: {
+    // backgroundColor: 'yellow',
+    margin: 20,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
+  text: {
+    fontSize: 16,
+    marginRight: 25,
+    color: 'gray',
+  }, 
   btn: {
     height: height * 0.06,
     width: width * 0.35,
@@ -50,7 +58,7 @@ module.exports = StyleSheet.create ({
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 30,
+    marginTop: 10,
   },
   btnText: {
     color: 'white',
