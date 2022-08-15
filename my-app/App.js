@@ -7,8 +7,10 @@ import { LoginScreen } from './src/screens/login';
 import { WelcomeScreen } from './src/screens/welcomePage';
 import { UserProfileScreen } from './src/screens/userProfile';
 import { TutorsListingScreen } from './src/screens/tutorsListing';
+import { MyActivityScreen } from './src/screens/myActivity';
 import { TutorProfileScreen } from './src/screens/tutorProfile';
 import { RequestTutorScreen } from './src/screens/requestTutor';
+
 
 const Stack = createNativeStackNavigator()
 
@@ -22,8 +24,10 @@ export default function App() {
         <Stack.Screen name = 'Welcome' component = { WelcomeScreen }/>
         <Stack.Screen name = 'My profile' component = { UserProfileScreen }/>
         <Stack.Screen name = 'Tutors' component = { TutorsListingScreen }/>
+        <Stack.Screen name = 'My Activity' component = { MyActivityScreen }/>
         <Stack.Screen name = 'Tutor profile' component = { TutorProfileScreen }/>
         <Stack.Screen name = 'Request Tutor' component = { RequestTutorScreen }/>
+
       </Stack.Navigator>
       <StatusBar />
     </NavigationContainer>
