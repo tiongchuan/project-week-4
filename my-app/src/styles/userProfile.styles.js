@@ -6,29 +6,37 @@ module.exports = StyleSheet.create ({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: '#FFFFFF'
+    backgroundColor: '#D9D9D9'
     //justifyContent: 'space-evenly'
   },
   img: {
-    height: height / 2,
+    height: height / 2.6,
     width: width / 1.2,
     resizeMode: 'contain',
-    marginTop: 20
+    marginTop: 30,
+    borderRadius: 200
   },
-  btns: {
-    position: 'absolute',
-    bottom: 240
+  texts: {
+    margin: 30,
   },
-  btn: {
-    height: 43,
-    width: 150,
-    backgroundColor: '#C52126',
-    alignItems: 'center',
-    justifyContent: 'center',
-    margin: 10,
-    borderRadius: 20
-  },
-  btnText: {
-    color: '#FFFFFF'
+  text: {
+    margin: 5,
+    fontSize: 16
   }
+  // btns: {
+  //   position: 'absolute',
+  //   bottom: 240
+  // },
+  // btn: {
+  //   height: 43,
+  //   width: 150,
+  //   backgroundColor: '#C52126',
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  //   margin: 10,
+  //   borderRadius: 20
+  // },
+  // btnText: {
+  //   color: '#FFFFFF'
+  // }
 })

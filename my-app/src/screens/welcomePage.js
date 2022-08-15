@@ -1,6 +1,5 @@
 import React from 'react'
 import { View, Text, Image, TouchableOpacity } from 'react-native'
-import mainPic from '../assets/mainPic.png'
 import styles from '../styles/welcomePage.styles'
 import boy from '../assets/Boy.jpg'
 
@@ -24,7 +23,7 @@ export const WelcomeScreen = ({ navigation }) => {
         </TouchableOpacity>
         <TouchableOpacity 
           style = { styles.btn }
-          // onPress = {() => navigation.navigate( 'Login' )}
+          onPress = {() => navigation.navigate( 'Tutors' )}
         >
           <Text style = { styles.btnText }>Tutors listing</Text>
         </TouchableOpacity>

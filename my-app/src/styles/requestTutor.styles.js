@@ -6,38 +6,63 @@ module.exports = StyleSheet.create ({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: '#FFFFFF'
+    backgroundColor: '#D9D9D9'
     //justifyContent: 'center',
   },
+  innerContainer: {
+    padding: 0,
+    height: height,
+    //alignItems: 'center'
+  },
+  calendar: {
+    width: width / 1.2,
+    marginTop: 20,
+    height: 370,
+    borderRadius: 20,
+    justifyContent: 'space-evenly',
+    shadowColor: "#000",
+    shadowOffset: {
+	    width: 0,
+	    height: 12,
+    },
+    shadowOpacity: 0.58,
+    shadowRadius: 16.00,
+    elevation: 24
+  },
+  texts: {
+    marginTop: 20,
+    flexDirection: 'row',
+  },
   text: {
-
+    fontWeight: 'bold',
+    margin: 10
   },
   inputContainer: {
-    //backgroundColor: 'red',
-    alignItems: 'center',
-    top: height * 0.15,
+    //justifyContent: 'flex-start'
+    //top: height * 0.15,
   },
   input: {
-    justifyContent: 'center',
-    textAlign: 'center',
-    height: height * 0.3,
-    width: width * 0.75,
-    margin: 10,
-    borderWidth: 1,
+    height: height / 6,
+    width: width / 1.2,
+    marginTop: 20,
+    borderWidth: 2,
     padding: 10,
-    fontSize: 16,
+    fontSize: 15,
     borderRadius: 20,
-    backgroundColor: '#F5F5F5',
-    borderColor: 'rgba(219, 219, 219, 0.2)',
+    backgroundColor: '#E6E6E6',
+    borderColor: '#D9D9D9'
+  },
+  btnContainer: {
+    alignItems: 'center'
   },
   btn: {
     height: height * 0.06,
     width: width * 0.35,
-    backgroundColor: '#C52126',
+    backgroundColor: '#9D2427',
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 150,
+    marginTop: 20
   },
   btnText: {
     color: 'white',

@@ -81,8 +81,7 @@ export const SignUpScreen = ({ navigation }) => {
               </View>
               <TouchableOpacity
                 style = { styles.btn } 
-                onPress = {() => navigation.navigate( 'Welcome' )}
-                >
+                onPress = {() => navigation.navigate( 'Login' )}>
                 <Text style = { styles.btnText }>Sign Up</Text>
               </TouchableOpacity>
             </View>

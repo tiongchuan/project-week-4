@@ -17,7 +17,7 @@ module.exports = StyleSheet.create ({
   p1:{
     // flex:1,
     fontSize: 50,
-    marginLeft:10,
+    //marginLeft:10,
     // justifyContent:'flex-start'
     // alignContent:'start',
     // alignSelf:'flex-start'
@@ -29,11 +29,11 @@ module.exports = StyleSheet.create ({
     fontFamily:'serif'
   },
   img: {
-    height: height / 2,
+    height: height / 2.6,
     width: width / 1.2,
-    resizeMode: 'contain',
+    resizeMode: 'cover',
     marginTop: 20,
-    borderRadius: 220,
+    borderRadius: 200,
     // borderTopRightRadius: 60,
     // borderBottomRightRadius: 60
   },
@@ -42,15 +42,15 @@ module.exports = StyleSheet.create ({
     // bottom: 240,
     flexDirection:'row',
     alignContent:'space-between',
-    margin:height/15
+    margin: height / 15
 
   },
   btn: {
     // height: 43,
     // width: 150,
-    height: height/20,
-    width: width/4,
-    backgroundColor: '#C52126',
+    height: height / 20,
+    width: width / 4,
+    backgroundColor: '#9D2427',
     alignItems: 'center',
     justifyContent: 'center',
     margin: 10,
