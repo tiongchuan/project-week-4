@@ -12,63 +12,18 @@ import {
 } from 'react-native'
 import styles from '../styles/myActivity.styles'
 import { useState, useEffect } from 'react'
+import API from '../services/API.service'
+import { GetData } from '../services/tutorsListing.service'
+
 
 
 export const MyActivityScreen = ({ navigation }) => {
-
-  // const dataUrl = "https://student-database2022.herokuapp.com/general/tutors";
-
-  // const getContent = () => {
-
-  // const [loading, setLoading] = useState(true);
-  // const [data, setData] = useState([]);
-
-  // useEffect(() => {
-  //     fetch(dataUrl)
-  //         .then((response) => response.json())
-  //         .then((json) => setData(json.name))
-  //         .catch((error) => alert(error))
-  //         .finally(setLoading(false))
-  // });
-  
-  
-  
-    // try {
-    //   let response = await fetch(dataUrl);
-    //   let responseJson = await response.json();
-    //   let data= 
-    //   console.log(data);
-    //   return responseJson
-    // } catch (e) {
-    //   console.log(e);
-    // }
-  
-
 
 
   return (
 
 
-    // <SafeAreaView>
-    //   {loading ? <ActivityIndicator /> : <FlatList
-    //     data={data}
-    //   />}
-    // </SafeAreaView>
-    // <View><Text>hello</Text></View>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // <GetData />
 
     <View style={styles.container}>
     <View style={styles.containerStatus}>
@@ -149,5 +104,10 @@ export const MyActivityScreen = ({ navigation }) => {
         </TouchableOpacity>
       </View>
     </View>
+
+
   )
 }
+
+
+
