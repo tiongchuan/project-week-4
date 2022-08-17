@@ -19,6 +19,8 @@ export const TutorsListingScreen = ({ navigation }) => {
 
   const [isLoading, setIsLoading] = useState(true);
   const [tutors, setTutors] = useState([]);
+  const [search, setSearch] = useState('');
+  const [filterTutor, setFilterTutor] = useState([])
 
   useEffect(() => {
     listTutors()
@@ -29,9 +31,25 @@ export const TutorsListingScreen = ({ navigation }) => {
       .then(function (response) {
         // console.log(response.data.data);
         setTutors(response.data.data);
+        setFilterTutor(response.data.data);
         (setIsLoading(false))
       })
       .catch((e) => (console.log(e)))
+  }
+
+  const searchFilter = (text) => {
+    if (text) {
+      const newData = tutors.filter((item) => {
+        const tutorUpper = item.name ? item.name.toUpperCase() : "".toUpperCase();
+        const textUpper = text.toUpperCase();
+        return tutorUpper.indexOf(textUpper) > -1;
+      })
+      setFilterTutor(newData)
+      setSearch(text);
+    } else {
+      setFilterTutor(tutors);
+      setSearch(text)
+    }
   }
 
   const myListEmpty = () => {
@@ -46,22 +64,29 @@ export const TutorsListingScreen = ({ navigation }) => {
 
   return (
 
-    <SafeAreaView style = {styles.listings }>
-      {isLoading ? <View style={styles.spinner}><ActivityIndicator size='large' color='#9D2427'/></View> :
-      <FlatList
-        data={tutors}
-        renderItem={({ item }) => (
-          <TouchableOpacity style={styles.listing} 
-          onPress={() => navigation.navigate('Tutor profile', {item})}>
+    <SafeAreaView style={styles.listings}>
+      <TextInput
+        style={styles.search}
+        value={search}
+        placeholder='Search'
+        underlineColorAndroid="transparent"
+        onChangeText={(text) => searchFilter(text)}
+      ></TextInput>
+      {isLoading ? <View style={styles.spinner}><ActivityIndicator size='large' color='#9D2427' /></View> :
+        <FlatList
+          data={filterTutor}
+          renderItem={({ item }) => (
+            <TouchableOpacity style={styles.listing}
+              onPress={() => navigation.navigate('Tutor profile', { item })}>
               <Image style={styles.img} source={profileImg} />
-              <View>
-          <Text style={styles.text1}>{item.name}</Text>
-          <Text style={styles.text2}>Experience: {item.experience} yrs</Text>
-        </View>
-        <Text style={styles.price}>${item.hourlyRate}</Text>
-          </TouchableOpacity>
-        )}
-                 ListHeaderComponent={() => (
+              <View style={styles.text0}>
+                <Text style={styles.text1}>{item.name}</Text>
+                <Text style={styles.text2}>Experience: {item.experience} yrs</Text>
+              </View>
+              <Text style={styles.price}>${item.hourlyRate}</Text>
+            </TouchableOpacity>
+          )}
+          ListHeaderComponent={() => (
             <Text style={styles.header}>
               List of Tutors
             </Text>
@@ -71,8 +96,8 @@ export const TutorsListingScreen = ({ navigation }) => {
               End of List</Text>
           )}
           ListEmptyComponent={myListEmpty}
-      />
-          }
-</SafeAreaView>
+        />
+      }
+    </SafeAreaView>
   )
 }

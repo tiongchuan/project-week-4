@@ -12,12 +12,16 @@ module.exports = StyleSheet.create({
   },
   search: {
     backgroundColor: '#FFFFFF',
-    width: width / 1.2,
+    // width: width / 1.2,
     height: 40,
     borderRadius: 20,
-    top: 20,
     padding: 10,
-    marginBottom: 10
+    // top: 20,
+    // marginBottom: 10,
+    borderColor:'#009688',
+    borderWidth: 1,
+    margin: 10,
+    // paddingLeft: 20,
   },
   listings: {
     flex: 1,
@@ -26,6 +30,7 @@ module.exports = StyleSheet.create({
     // marginTop: 20,
   },
   listing: {
+    flex:1,
     //position: 'absolute',
     height: 100,
     backgroundColor: '#9D2427',
@@ -44,6 +49,11 @@ module.exports = StyleSheet.create({
     shadowRadius: 11.14,
     elevation: 17
   },
+  text0:{
+    flex:2,
+    justifyContent:'center',
+    paddingHorizontal:width/20
+  },
   text1: {
     color: '#FFFFFF',
     fontWeight: 'bold',
@@ -53,12 +63,14 @@ module.exports = StyleSheet.create({
     color: '#FFFFFF'
   },
   img: {
+    // flex:1,
     position: 'relative',
     height: 70,
     width: width / 6,
     borderRadius: 60
   },
   price: {
+    flex:1,
     fontSize: 30,
     color: '#FFFFFF',
     //fontStyle: 'italic',
