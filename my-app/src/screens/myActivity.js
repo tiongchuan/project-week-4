@@ -13,7 +13,7 @@ import {
 import styles from '../styles/myActivity.styles'
 import { useState, useEffect } from 'react'
 import API from '../services/API.service'
-import { GetData } from '../services/tutorsListing.service'
+// import { GetTutorData } from './tutorsListing.service'
 
 
 
@@ -23,11 +23,11 @@ export const MyActivityScreen = ({ navigation }) => {
   return (
 
 
-    // <GetData />
+    // <GetTutorData />
 
     <View style={styles.container}>
-    <View style={styles.containerStatus}>
       <ScrollView>
+        <View style={styles.containerStatus}>
         <View style={styles.listings}>
 
           <TouchableOpacity
@@ -39,7 +39,7 @@ export const MyActivityScreen = ({ navigation }) => {
               <Text style={styles.text1}>Time: <Text style={styles.text2}>1.30pm-3.30pm</Text></Text>
               <Text style={styles.text1}>Tutor: <Text style={styles.text2}>TC Ong</Text></Text>
             </View>
-            <Text style={styles.status}>Pending</Text>
+            <Text style={styles.status}>Pending...</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -52,7 +52,7 @@ export const MyActivityScreen = ({ navigation }) => {
               <Text style={styles.text1}>Time: <Text style={styles.text2}>1.30pm-3.30pm</Text></Text>
               <Text style={styles.text1}>Tutor: <Text style={styles.text2}>TC Ong</Text></Text>
             </View>
-            <Text style={styles.status}>Pending</Text>
+            <Text style={styles.status}>Pending...</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -65,37 +65,38 @@ export const MyActivityScreen = ({ navigation }) => {
               <Text style={styles.text1}>Time: <Text style={styles.text2}>1.30pm-3.30pm</Text></Text>
               <Text style={styles.text1}>Tutor: <Text style={styles.text2}>TC Ong</Text></Text>
             </View>
-            <Text style={styles.status}>Pending</Text>
+            <Text style={styles.status}>Pending...</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.listing}
+            // onPress={() => navigation.navigate('BookingStatus')}
+            >
+
+            <View>
+              <Text style={styles.text1}>Date: <Text style={styles.text2}>23/7/2022</Text></Text>
+              <Text style={styles.text1}>Time: <Text style={styles.text2}>1.30pm-3.30pm</Text></Text>
+              <Text style={styles.text1}>Tutor: <Text style={styles.text2}>TC Ong</Text></Text>
+            </View>
+            <Text style={styles.status}>Completed</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             style={styles.listing}
             onPress={() => navigation.navigate('BookingStatus')}>
-
+            
             <View>
-              <Text style={styles.text1}>Date: <Text style={styles.text2}>23/7/2022</Text></Text>
-              <Text style={styles.text1}>Time: <Text style={styles.text2}>1.30pm-3.30pm</Text></Text>
+              <Text style={styles.text1}>Date: <Text style={styles.text2}>10/7/2022</Text></Text>
+              <Text style={styles.text1}>Time: <Text style={styles.text2}>3.30pm-5.30pm</Text></Text>
               <Text style={styles.text1}>Tutor: <Text style={styles.text2}>TC Ong</Text></Text>
             </View>
-            <Text style={styles.status}>Pending</Text>
-          </TouchableOpacity>
-
-
-          <TouchableOpacity
-            style={styles.listing}
-            // onPress={() => navigation.navigate('BookingStatus')}
-            >
-            <Text style={styles.status}>23/4/2022</Text>
-            <View>
-              <Text style={styles.text1}>TC Ong</Text>
-              <Text style={styles.text2}>Mathematic</Text>
-            </View>
+            <Text style={styles.status}>Completed</Text>
           </TouchableOpacity>
 
         </View>
-      </ScrollView>
 
-    </View>
+        </View>
+      </ScrollView>
     <View  style={styles.containertbn}>
         <TouchableOpacity
           style={styles.homebtn}

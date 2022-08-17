@@ -16,20 +16,20 @@ module.exports = StyleSheet.create ({
   },
   img: {
     //backgroundColor: 'blue',
-    height: height * 0.2,
+    height: height / 3,
     width: width * 0.85,
     resizeMode: 'contain',
-    top: height * 0.06,
+    top: height * 0.01,
   },
   inputContainer: {
     // backgroundColor: 'red',
     alignItems: 'center',
-    top: height * 0.06,
+    top: height * 0.01,
   },
   input: {
     justifyContent: 'center',
     textAlign: 'center',
-    height: height * 0.06,
+    height: height * 0.05,
     width: width * 0.75,
     margin: 5,
     borderWidth: 1,
@@ -54,7 +54,7 @@ module.exports = StyleSheet.create ({
   btn: {
     height: height * 0.06,
     width: width * 0.35,
-    backgroundColor: '#C52126',
+    backgroundColor: '#9D2427',
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',

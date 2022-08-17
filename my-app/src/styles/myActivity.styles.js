@@ -12,11 +12,11 @@ module.exports = StyleSheet.create({
     //backgroundColor: '#D9D9D9'
     //justifyContent: 'space-evenly'
     // paddingLeft: 30
-    marginHorizontal: width/20,
+    marginHorizontal: width / 12,
   },
   listings: {
     height: height,
-    // width: width / 1.2,
+    width: width / 1.2,
     marginTop: 20,
     shadowColor: "#000",
     shadowOffset: {
@@ -39,7 +39,7 @@ module.exports = StyleSheet.create({
     alignItems: 'center'
   },
   status: {
-    fontSize: 25,
+    fontSize: 20,
     color: '#FFFFFF',
     //fontStyle: 'italic',
     fontWeight: 'bold'
@@ -53,21 +53,13 @@ module.exports = StyleSheet.create({
     color: '#FFFFFF',
     fontWeight: 'normal',
   },
-  containerbtn: {
-    flex: 1,
-    // flexDirection:'row',
-    // marginHorizontal: 'auto',
-    // justifyContent:"flex-end",
-    // alignContent:'center',
-    // marginBottom: height/20
-  },
   homebtn: {
     // height: 50,
     // width: 150,
     backgroundColor: '#9D2427',
-    marginTop: 10,
-    marginBottom:10,
-    marginHorizontal:'30%',
+    //marginTop: 10,
+    //marginBottom:10,
+    //marginHorizontal:'30%',
     borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',

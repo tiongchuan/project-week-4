@@ -22,7 +22,7 @@ module.exports = StyleSheet.create ({
   btn: {
     height: height * 0.06,
     width: width * 0.35,
-    backgroundColor: '#C52126',
+    backgroundColor: '#9D2427',
     alignItems: 'center',
     justifyContent: 'center',
     margin: 10,

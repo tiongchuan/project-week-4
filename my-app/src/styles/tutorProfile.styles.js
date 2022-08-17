@@ -11,7 +11,7 @@ module.exports = StyleSheet.create ({
     //justifyContent: 'space-evenly'
   },
   img: {
-    height: height / 3,
+    height: height / 2.6,
     width: width / 1.2,
     //resizeMode: 'contain',
     marginTop: 20,
@@ -27,7 +27,7 @@ module.exports = StyleSheet.create ({
   btn: {
     height: 43,
     width: 150,
-    backgroundColor: '#C52126',
+    backgroundColor: '#9D2427',
     alignItems: 'center',
     justifyContent: 'center',
     margin: 20,
