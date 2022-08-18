@@ -1,53 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { 
   View, 
   Text, 
   Keyboard,
   TextInput, 
-  ScrollView,
   TouchableOpacity, 
   KeyboardAvoidingView, 
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
+  ScrollView, 
 } from 'react-native'
-import dayjs from 'dayjs'
-import { Calendar } from 'react-native-calendars'
 import styles from '../styles/requestTutor.styles'
-import SelectDropdown from 'react-native-select-dropdown'
+import { Calendar, Agenda } from 'react-native-calendars'
+import format from 'date-fns'
 
 export const RequestTutorScreen = ({ navigation }) => {
-
-  const [dayPress, setDayPress] = useState ()
-  const [manageTimeSlot, setManageTimeSlot] = useState()
-  
-  const onDayPress = ( day ) => {
-    const dateString = dayjs( day.dateString ).format( 'DD/MM/YYYY' )
-    setDayPress( dateString )
-    console.log( dateString )
-  }  
-  const date = dayPress? dayPress.toString () : ''
-
-  const timeSlot = [
-    '10:00 ~ 12:00',
-    '13:00 ~ 15:00',
-    '16:00 ~ 18:00',
-    '19:00 ~ 21:00'
-  ]
-
-  const onSelectTimeSlot = ( selectedTimeSlot ) => {
-    const timeSlot = selectedTimeSlot
-      setManageTimeSlot( timeSlot )
-      console.log( selectedTimeSlot )
-    }
-  const time = manageTimeSlot? manageTimeSlot : ''
-
-  const pressConfirm = () => {
-    alert( `Class on ${date} ${time}` )
-    // setPopulate(prev => {
-    //   return {any:[...prev.any, ...prev.onDayPress]}
-    // })
-    console.log(date, time)
-    navigation.navigate( 'My Activity' )
-  }
 
   return (
     <ScrollView>
@@ -57,10 +23,18 @@ export const RequestTutorScreen = ({ navigation }) => {
         <TouchableWithoutFeedback onPress = { Keyboard.dismiss }>
           <View style = { styles.innerContainer }>
             <Calendar 
+              markedDates={{
+                '2022-08-16': {selected: true, marked: true, selectedColor: 'pink'},
+                '2022-08-17': {marked: true},
+                '2022-08-18': {marked: true, dotColor: '#FFFFFF', activeOpacity: 0},
+                '2022-08-19': {marked: true}
+              }}
               style = { styles.calendar }
-              onDayPress= { onDayPress }              
+              onDayPress= {( res ) => console.log ( res )}
+              //current = { format ( baseDate )}
+              //markedDates = { getMarkedDates ( baseDate, APPOINTMENTS )}
               enableSwipeMonths = { true }
-              theme = {{ 
+              theme = {{
                 calendarBackground: '#9D2427',
                 selectedDayBackgroundColor: 'white',
                 selectedDayTextColor: 'black',
@@ -80,51 +54,28 @@ export const RequestTutorScreen = ({ navigation }) => {
                   }
                 }
               }} />
-            <View style = { styles.textsContainer }>
-              <View style = { styles.texts }>
-                <Text 
-                  style = { styles.text }>
-                  Selected Date: { date } 
-                </Text>
-                <View style = { styles.dropBox }>
-                  <Text style = { styles.text }>Time:</Text>
-                  <SelectDropdown 
-                    defaultButtonText = 'select time'
-                    dropdownStyle = { styles.dropdownStyle }
-                    buttonStyle = { styles.dropdownButtonStyle }
-                    buttonTextStyle = { styles. dropdownButtonTextStyle }
-                    rowTextStyle = {{ fontSize: 12 }}
-                    data = { timeSlot }
-                    onSelect = { onSelectTimeSlot }
-                    buttonTextAfterSelection = {( selectedTimeSlot, index ) => {
-                      return selectedTimeSlot
-                    }}
-                    rowTextForSelection = {( item, index ) => {
-                      return item
-                    }}
-                  />
-                </View>
-                <Text style = { styles.text }>Total Price: 300SGD</Text>
+            <View style = { styles.texts}>
+              <View >
+                <Text style = { styles.text }>Selected Date: 15/08/2022</Text>
                 <Text style = { styles.text }>Additional Request:</Text>
+              </View>
+              <View>
+                <Text style = { styles.text }>Time: 2 hours</Text>
+                <Text style = { styles.text }>Total Price: 300SGD</Text>
               </View>
             </View>
             <View style = { styles.inputContainer }>
               <TextInput 
               style = { styles.input } 
-              placeholder = "Additional Request..." 
+              placeholder = "Additional Request" 
               multiline = { true }
               numberOfLines = { 5 }
               onChangeText = {( text ) => { text }}/>
             </View>
-            {/* <View style = { styles.populate}>
-              { populate.map ( item => (
-                <Text >{ item.any }</Text>
-              ))}
-            </View> */}
             <View style = { styles.btnContainer }>
               <TouchableOpacity 
                 style = { styles.btn }
-                onPress = { pressConfirm }>
+                onPress = {() => navigation.navigate( 'My Activity' )} >
                 <Text style = { styles.btnText }>Confirm</Text>
               </TouchableOpacity>
             </View>

@@ -19,7 +19,7 @@ module.exports = StyleSheet.create ({
     marginTop: 20,
     height: 370,
     borderRadius: 20,
-    //justifyContent: 'space-evenly',
+    justifyContent: 'space-evenly',
     shadowColor: "#000",
     shadowOffset: {
 	    width: 0,
@@ -29,38 +29,22 @@ module.exports = StyleSheet.create ({
     shadowRadius: 16.00,
     elevation: 24
   },
-  textsContainer: {
-    alignItems: 'center',
-    marginTop: 10,
-  },
   texts: {
-    alignItems: 'flex-start'
-  },
-  dropBox: {
-    flexDirection: 'row'
+    marginTop: 20,
+    flexDirection: 'row',
   },
   text: {
     fontWeight: 'bold',
     margin: 10
   },
-  dropdownButtonStyle: {
-    backgroundColor: '#9D2427',
-    height: 30,
-    width: 130,
-    borderRadius: 20
-  },
-  dropdownButtonTextStyle: {
-    color:'#F5F5F5', 
-    fontSize: 12
-  },
-  dropdownStyle: {
-    borderRadius: 20,
-    backgroundColor: '#F5F5F5',
+  inputContainer: {
+    //justifyContent: 'flex-start'
+    //top: height * 0.15,
   },
   input: {
     height: height / 6,
     width: width / 1.2,
-    marginTop: 5,
+    marginTop: 20,
     borderWidth: 2,
     padding: 10,
     fontSize: 15,
@@ -72,7 +56,7 @@ module.exports = StyleSheet.create ({
     alignItems: 'center'
   },
   btn: {
-    height: height * 0.05,
+    height: height * 0.06,
     width: width * 0.35,
     backgroundColor: '#9D2427',
     borderRadius: 20,
@@ -82,19 +66,5 @@ module.exports = StyleSheet.create ({
   },
   btnText: {
     color: 'white',
-  },
-  listing: {
-    height: 100,
-    backgroundColor: '#9D2427',
-    marginTop: 18,
-    borderRadius: 20,
-    padding: 25,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center'
-  },
-  text2: {
-    color: '#FFFFFF',
-    fontWeight: 'normal',
-  },
+  }
 })

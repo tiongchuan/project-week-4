@@ -4,16 +4,25 @@ import styles from '../styles/welcomePage.styles'
 import boy from '../assets/Boy.jpg'
 import profileImg from '../assets/profileImg.jpg'
 
+
 // import Tabs from '../navigation/tabs'
+
+
 
 export const WelcomeScreen = ({ navigation, route }) => {
 
+
   return (
+
+   
 
     <View style = { styles.container }>
 
+
+      
       <Text style={styles.p1}>Welcome </Text>
       <Text style={styles.p2}> { route.params.name } </Text>
+
 
       <Image style = { styles.img } source = { boy } />
 

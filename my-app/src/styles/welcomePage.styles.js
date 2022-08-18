@@ -17,7 +17,6 @@ module.exports = StyleSheet.create ({
   p1:{
     // flex:1,
     fontSize: 50,
-    marginTop: 10
     //marginLeft:10,
     // justifyContent:'flex-start'
     // alignContent:'start',
@@ -27,8 +26,7 @@ module.exports = StyleSheet.create ({
   p2:{
     fontSize: 40,
     fontStyle:'italic',
-    // fontFamily:'serif',
-    
+    fontFamily:'serif'
   },
   img: {
     height: height / 2.6,
