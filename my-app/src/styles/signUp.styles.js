@@ -10,26 +10,23 @@ module.exports = StyleSheet.create ({
     //justifyContent: 'center',
   },
   innerContainer: {
-    //backgroundColor: 'green',
     padding: 0,
     height: height,
   },
   img: {
-    //backgroundColor: 'blue',
     height: height / 3,
     width: width * 0.85,
     resizeMode: 'contain',
     top: height * 0.01,
   },
   inputContainer: {
-    // backgroundColor: 'red',
     alignItems: 'center',
     top: height * 0.01,
   },
   input: {
     justifyContent: 'center',
     textAlign: 'center',
-    height: height * 0.05,
+    height: height * 0.06,
     width: width * 0.75,
     margin: 5,
     borderWidth: 1,
@@ -40,7 +37,6 @@ module.exports = StyleSheet.create ({
     borderColor: 'rgba(219, 219, 219, 0.2)',
   },
   toggle: {
-    // backgroundColor: 'yellow',
     margin: 20,
     flexDirection: 'row',
     justifyContent: 'center',

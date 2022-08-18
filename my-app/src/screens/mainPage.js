@@ -10,13 +10,13 @@ export const MainScreen = ({ navigation }) => {
       <View style = { styles.btnContainer }>
         <TouchableOpacity 
           style = { styles.btn }
-          onPress = {() => navigation.navigate( 'Sign Up' )}>
-          <Text style = { styles.btnText }>Sign Up</Text>
+          onPress = {() => navigation.navigate( 'Login' )}>
+          <Text style = { styles.btnText }>Login</Text>
         </TouchableOpacity>
         <TouchableOpacity 
           style = { styles.btn }
-          onPress = {() => navigation.navigate( 'Login' )}>
-          <Text style = { styles.btnText }>Login</Text>
+          onPress = {() => navigation.navigate( 'Sign Up' )}>
+          <Text style = { styles.btnText }>Sign Up</Text>
         </TouchableOpacity>
       </View>
     </View>
