@@ -11,7 +11,6 @@ import { MyActivityScreen } from './src/screens/myActivity';
 import { TutorProfileScreen } from './src/screens/tutorProfile';
 import { RequestTutorScreen } from './src/screens/requestTutor';
 
-
 const Stack = createNativeStackNavigator()
 
 export default function App() {
@@ -27,7 +26,6 @@ export default function App() {
         <Stack.Screen name = 'My Activity' component = { MyActivityScreen }/>
         <Stack.Screen name = 'Tutor profile' component = { TutorProfileScreen }/>
         <Stack.Screen name = 'Request Tutor' component = { RequestTutorScreen }/>
-
       </Stack.Navigator>
       <StatusBar />
     </NavigationContainer>

@@ -6,12 +6,8 @@ import boy from '../assets/Boy.jpg'
 export const WelcomeScreen = ({ navigation }) => {
   return (
     <View style = { styles.container }>
-
-      
       <Text style={styles.p1}>Welcome,</Text>
-     
-
-      <Text style={styles.p2}>Namo Student</Text>
+      <Text style = { styles.p2 }>Namo Student</Text>
       <Image style = { styles.img } source = { boy } />
       
       <View style = {styles.btns }>
