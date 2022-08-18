@@ -10,8 +10,7 @@ import {
   ScrollView, 
 } from 'react-native'
 import styles from '../styles/requestTutor.styles'
-import { Calendar, Agenda } from 'react-native-calendars'
-import format from 'date-fns'
+import { Calendar } from 'react-native-calendars'
 
 export const RequestTutorScreen = ({ navigation }) => {
 
