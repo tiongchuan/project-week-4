@@ -3,11 +3,15 @@ import { View, Text, Image, TouchableOpacity, Button } from 'react-native'
 import profileImg from '../assets/profileImg.jpg'
 import styles from '../styles/userProfile.styles'
 
+
+
 export const UserProfileScreen = ({ navigation, route }) => {
+
   return (
     <View style = { styles.container }>
       <Image style = { styles.img } source = { profileImg }/>
       <View style = { styles.texts }> 
+
         <Text style = { styles.text }>Name: { route.params.name }</Text>
         <Text style = { styles.text }>Age: 20 </Text>
         <Text style = { styles.text }>E-mail: { route.params.email } </Text>
@@ -19,6 +23,7 @@ export const UserProfileScreen = ({ navigation, route }) => {
         >
         <Text style = { styles.btnText }>Logout</Text>
       </TouchableOpacity>
+
     </View>
   )
 }

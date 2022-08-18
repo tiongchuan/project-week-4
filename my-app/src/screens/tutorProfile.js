@@ -3,12 +3,19 @@ import { View, Text, Image, TouchableOpacity } from 'react-native'
 import profileImg from '../assets/profileImg.jpg'
 import styles from '../styles/tutorProfile.styles'
 
-export const TutorProfileScreen = ({ navigation }) => {
+
+export const TutorProfileScreen = ({ navigation, route }) => {
+
+  // console.log(route.params.item);
+
   return (
     <View style = { styles.container }>
       <Image style = { styles.img } source = { profileImg } />
       <View style = { styles.texts }>
-        <Text style = { styles.text }>Name: Will </Text>
+        <Text style = { styles.text }>Name: {route.params.item.name}</Text>
+        <Text style = { styles.text }>Experience: {route.params.item.experience} years</Text>
+        <Text style = { styles.text }>Hourly Rate: ${route.params.item.hourlyRate}</Text>
+        <Text style = { styles.text }>Highest Education: {route.params.item.highestEducation}</Text>
         <Text style = { styles.text }>Age: 20 </Text>
         <Text style = { styles.text }>E-mail: will@gamil.com </Text>
         <Text style = { styles.text }>Mobile number: 94582165 </Text>

@@ -14,6 +14,7 @@ module.exports = StyleSheet.create ({
     height: height,
   },
   img: {
+
     height: height / 3,
     width: width * 0.85,
     resizeMode: 'contain',
@@ -26,7 +27,7 @@ module.exports = StyleSheet.create ({
   input: {
     justifyContent: 'center',
     textAlign: 'center',
-    height: height * 0.06,
+    height: height * 0.05,
     width: width * 0.75,
     margin: 5,
     borderWidth: 1,

@@ -12,12 +12,15 @@ module.exports = StyleSheet.create ({
   img: {
     height: height / 2.6,
     width: width / 1.2,
+
     resizeMode: 'cover',
+
     marginTop: 30,
     borderRadius: 200
   },
   texts: {
     margin: 30,
+
   },
   text: {
     margin: 5,
@@ -35,4 +38,5 @@ module.exports = StyleSheet.create ({
   btnText: {
     color: 'white',
   },
+
 })
