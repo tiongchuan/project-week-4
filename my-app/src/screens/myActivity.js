@@ -13,7 +13,6 @@ import {
 import styles from '../styles/myActivity.styles'
 import { useState, useEffect } from 'react'
 import API from '../services/API.service'
-// import { GetTutorData } from './tutorsListing.service'
 
 
 
@@ -21,9 +20,6 @@ export const MyActivityScreen = ({ navigation }) => {
 
 
   return (
-
-
-    // <GetTutorData />
 
     <View style={styles.container}>
       <ScrollView>
@@ -97,13 +93,13 @@ export const MyActivityScreen = ({ navigation }) => {
 
         </View>
       </ScrollView>
-    <View  style={styles.containertbn}>
+    {/* <View  style={styles.containertbn}>
         <TouchableOpacity
           style={styles.homebtn}
           onPress={() => navigation.navigate('Welcome')}>
           <Text style={styles.hometext}>Home</Text>
         </TouchableOpacity>
-      </View>
+      </View> */}
     </View>
 
 
