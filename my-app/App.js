@@ -11,9 +11,7 @@ import { MyActivityScreen } from './src/screens/myActivity';
 import { TutorProfileScreen } from './src/screens/tutorProfile';
 import { RequestTutorScreen } from './src/screens/requestTutor';
 
-
 import Tabs from './src/navigation/tabs';
-
 
 const Stack = createNativeStackNavigator()
 
