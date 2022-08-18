@@ -31,7 +31,7 @@ export const LoginScreen = ({ navigation }) => {
           console.log(res.data);
 
           if (res.data.status == "200") {
-            navigation.navigate('Welcome');
+            navigation.navigate('Welcome', {email: email} );
             console.log(res.message);
           }
         })
@@ -55,6 +55,10 @@ export const LoginScreen = ({ navigation }) => {
         });
   };
 
+  const handleForgetPassword = () => {
+    alert("A reset password email had been sent to you")
+  }
+
   return (
     <ScrollView>
       <KeyboardAvoidingView 
@@ -77,7 +81,11 @@ export const LoginScreen = ({ navigation }) => {
                 value = { password }
                 onChangeText = { setPassword }
                 />
-              <Text style = { styles.text }>Forgot password?</Text>
+               <TouchableOpacity
+                onPress = { handleForgetPassword }
+                >
+                <Text style = { styles.Text }>Forget password?</Text>
+              </TouchableOpacity>
               <TouchableOpacity
                 style = { styles.btn } 
                 onPress = { handleLogin }

@@ -17,6 +17,7 @@ import API from '../config/api.js'
 
 export const SignUpScreen = ({ navigation }) => {
   
+  const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
   const [confirmPassword, setconfirmPassword] = useState(null);
@@ -33,7 +34,7 @@ export const SignUpScreen = ({ navigation }) => {
     })
     .then (res => {     
       if (res.data.status == "200") {
-        navigation.navigate('Welcome');
+        navigation.navigate('Welcome', {name: name, email: email});
         console.log(res.data);
         console.log("sign up successfully");
       } 
@@ -62,12 +63,12 @@ export const SignUpScreen = ({ navigation }) => {
             
             <Image style = { styles.img } source = { signUpPic }/>
             <View style = { styles.inputContainer }>
-              {/* <TextInput 
+              <TextInput 
                 style = { styles.input } 
-                placeholder = 'username'
-                // value = { name }
-                // onChangeText = { handleName } 
-              /> */}
+                placeholder = 'Username'
+                value = { name }
+                onChangeText = { setName } 
+              />
               <TextInput 
                 style = {styles.input} 
                 placeholder = 'Email' 
