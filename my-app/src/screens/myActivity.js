@@ -93,7 +93,9 @@ export const MyActivityScreen = ({ navigation }) => {
 
         </View>
       </ScrollView>
+
     {/* <View  style={styles.containertbn}>
+
         <TouchableOpacity
           style={styles.homebtn}
           onPress={() => navigation.navigate('Welcome')}>

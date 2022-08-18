@@ -12,7 +12,9 @@ module.exports = StyleSheet.create({
   },
   search: {
     backgroundColor: '#FFFFFF',
+
     // width: width / 1.2,
+
     height: 40,
     borderRadius: 20,
     padding: 10,
@@ -26,8 +28,10 @@ module.exports = StyleSheet.create({
   listings: {
     flex: 1,
     height: height,
+
     // width: width / 1.2,
     // marginTop: 20,
+
   },
   listing: {
     flex:1,
@@ -42,6 +46,7 @@ module.exports = StyleSheet.create({
     alignItems: 'center',
     shadowColor: "#000",
     shadowOffset: {
+
       width: 8,
       height: 6,
     },
@@ -53,6 +58,7 @@ module.exports = StyleSheet.create({
     flex:2,
     justifyContent:'center',
     paddingHorizontal:width/20
+
   },
   text1: {
     color: '#FFFFFF',
