@@ -10,19 +10,16 @@ module.exports = StyleSheet.create ({
     //justifyContent: 'center',
   },
   innerContainer: {
-    //backgroundColor: 'green',
     padding: 0,
     height: height,
   },
   img: {
-    //backgroundColor: 'blue',
     height: height * 0.4,
     width: width * 0.85,
     resizeMode: 'contain',
     top: height * 0.06,
   },
   inputContainer: {
-    //backgroundColor: 'red',
     alignItems: 'center',
     top: height * 0.06,
   },
