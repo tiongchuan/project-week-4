@@ -60,5 +60,22 @@ module.exports = StyleSheet.create ({
   },
   btnText: {
     color: '#FFFFFF'
+  },
+
+
+
+
+
+
+
+  texts: {
+    margin: 30,
+  },
+  text: {
+    margin: 5,
+    fontSize: 16
   }
+
+
+
 })

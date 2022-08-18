@@ -58,6 +58,12 @@ export const MyActivityScreen = ({ navigation }) => {
           </View>
         </View>
       </ScrollView>
+
     </View>
+
+
   )
 }
+
+
+
