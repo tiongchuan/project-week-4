@@ -29,7 +29,7 @@ module.exports = StyleSheet.create({
   listing: {
     flex:1,
     //position: 'absolute',
-    height: height * 0.1,
+    height: height * 0.11,
     width: width * 0.88,
     backgroundColor: '#9D2427',
     marginTop: 18,
@@ -69,8 +69,7 @@ module.exports = StyleSheet.create({
     borderRadius: 60
   },
   price: {
-    flex:1,
-    fontSize: 30,
+    fontSize: 28,
     color: '#FFFFFF',
     //fontStyle: 'italic',
     fontWeight: 'bold'

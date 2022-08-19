@@ -9,7 +9,7 @@ module.exports = StyleSheet.create ({
     backgroundColor: '#FFFFFF'
   },
   welcomeTexts: {
-    marginTop: height * 0.06
+    marginTop: height * 0.05
   },
   p1:{
     fontSize: 50
