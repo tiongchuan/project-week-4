@@ -28,9 +28,6 @@ export const LoginScreen = ({ navigation }) => {
         })
         .then (res => {
 
-          // console.log(res.data);
-
-
           if (res.data.status == "200") {
             navigation.navigate('Tabs', {screen:'Welcome',params:{email:email}});
             // console.log(res.message);
@@ -38,7 +35,7 @@ export const LoginScreen = ({ navigation }) => {
         })
         .catch (e => {
 
-          // Check if email or password is empited
+          // Check if email or password is empty
           if (e.response.status == "500") {
             const message = JSON.stringify(e.response.data.message);
             alert(`${message}`);

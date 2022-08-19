@@ -58,8 +58,6 @@ export const TutorsListingScreen = ({ navigation }) => {
     );
   };
 
-  // console.log(isLoading);
-
   return (
     <SafeAreaView style={styles.listings}>
       <TextInput
@@ -85,15 +83,6 @@ export const TutorsListingScreen = ({ navigation }) => {
               <Text style={styles.price}>${item.hourlyRate}</Text>
             </TouchableOpacity>
           )}
-          // ListHeaderComponent={() => (
-          //   <Text style={styles.header}>
-          //     List of Tutors
-          //   </Text>
-          // )}
-          // ListFooterComponent={() => (
-          //   <Text style={styles.footer}>
-          //     End of List</Text>
-          // )}
           ListEmptyComponent={myListEmpty}
         />
       }

@@ -25,7 +25,7 @@ module.exports = StyleSheet.create ({
   input: {
     justifyContent: 'center',
     textAlign: 'center',
-    height: height * 0.04,
+    height: height * 0.06,
     width: width * 0.75,
     margin: 5,
     borderWidth: 1,
@@ -47,7 +47,7 @@ module.exports = StyleSheet.create ({
     color: 'gray',
   }, 
   btn: {
-    height: height * 0.05,
+    height: height * 0.06,
     width: width * 0.35,
     backgroundColor: '#9D2427',
     borderRadius: 20,
