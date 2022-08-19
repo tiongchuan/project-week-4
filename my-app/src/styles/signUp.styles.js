@@ -7,27 +7,25 @@ module.exports = StyleSheet.create ({
     flex: 1,
     alignItems: 'center',
     backgroundColor: '#FFFFFF',
-    //justifyContent: 'center',
   },
   innerContainer: {
     padding: 0,
     height: height,
   },
   img: {
-
     height: height / 3,
     width: width * 0.85,
     resizeMode: 'contain',
-    top: height * 0.01,
+    top: height * 0.05,
   },
   inputContainer: {
     alignItems: 'center',
-    top: height * 0.01,
+    top: height * 0.03,
   },
   input: {
     justifyContent: 'center',
     textAlign: 'center',
-    height: height * 0.05,
+    height: height * 0.04,
     width: width * 0.75,
     margin: 5,
     borderWidth: 1,
@@ -49,13 +47,13 @@ module.exports = StyleSheet.create ({
     color: 'gray',
   }, 
   btn: {
-    height: height * 0.06,
+    height: height * 0.05,
     width: width * 0.35,
     backgroundColor: '#9D2427',
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 10,
+    //marginTop: height * 0.00,
   },
   btnText: {
     color: 'white',

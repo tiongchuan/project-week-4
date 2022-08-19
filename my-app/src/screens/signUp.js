@@ -4,10 +4,10 @@ import {
   Image,
   Keyboard,
   TextInput,
+  ScrollView,
   TouchableOpacity,
   KeyboardAvoidingView, 
   TouchableWithoutFeedback,
-  ScrollView 
   } from 'react-native'
 import React, { useState } from 'react'
 import { Switch } from 'react-native-switch'
@@ -20,37 +20,34 @@ export const SignUpScreen = ({ navigation }) => {
   const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
-  const [confirmPassword, setconfirmPassword] = useState(null);
+  const [confirmPassword, setConfirmPassword] = useState(null);
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState)
 
   const handleSignUp =  async () => {
 
     await API
-    .post ('/register', {
+    .post ( '/register', {
       email: email, 
       password: password,
       //role: role,
     })
-    .then (res => {     
-      if (res.data.status == "200") {
-        navigation.navigate('Welcome', {name: name, email: email});
-        console.log(res.data);
-        console.log("sign up successfully");
+    .then ( res => {     
+      if ( res.data.status == "200" ) {
+        navigation.navigate( 'Welcome', { name: name, email: email });
+        console.log( res.data );
+        console.log( "sign up successfully" );
       } 
     })
-    .catch (e => {
-
+    .catch ( e => {
       // Check if email or password is empty
-      if (e.response.status == "500") {
-        const message = JSON.stringify(e.response.data.message);
-        alert(`${message}`);
+      if ( e.response.status == "500" ) {
+        const message = JSON.stringify( e.response.data.message );
+        alert( `${message}` );
         // console.log(e.response.status);
         // console.log(e.response.data);
       }
-
     });
-
   };
 
   return(
@@ -60,7 +57,6 @@ export const SignUpScreen = ({ navigation }) => {
         behavior= { Platform.OS === "ios" ? "padding" : "height" }>
         <TouchableWithoutFeedback onPress = { Keyboard.dismiss }>
           <View style = { styles.innerContainer }>
-            
             <Image style = { styles.img } source = { signUpPic }/>
             <View style = { styles.inputContainer }>
               <TextInput 
@@ -75,12 +71,6 @@ export const SignUpScreen = ({ navigation }) => {
                 value = { email }
                 onChangeText = { setEmail }
                 />
-              {/* <TextInput 
-                style = { styles.input } 
-                placeholder = 'mobile number' 
-                // value = { mobileNumber }
-                // onChangeText = { handleMobileNumber }
-                keyboardType = 'numeric' /> */}
               <TextInput 
                 style = {styles.input} 
                 placeholder = 'Enter password' 
@@ -91,7 +81,7 @@ export const SignUpScreen = ({ navigation }) => {
                 style = { styles.input } 
                 placeholder = 'Confirm password' 
                 value = { confirmPassword }
-                onChangeText = { setconfirmPassword }
+                onChangeText = { setConfirmPassword }
                 />
               <View style = { styles.toggle }>
                 <Text style = { styles.text }>I am a </Text>
@@ -115,9 +105,7 @@ export const SignUpScreen = ({ navigation }) => {
               </View>
               <TouchableOpacity
                 style = { styles.btn } 
-
                 onPress = { handleSignUp }>
-
                 <Text style = { styles.btnText }>Sign Up</Text>
               </TouchableOpacity>
             </View>

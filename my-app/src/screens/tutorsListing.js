@@ -12,7 +12,7 @@ import {
 } from 'react-native'
 import styles from '../styles/tutorsListing.styles'
 import profileImg from '../assets/profileImg.jpg'
-import API from "../services/API.service";
+import API from '../config/api.js'
 
 
 export const TutorsListingScreen = ({ navigation }) => {
@@ -27,7 +27,7 @@ export const TutorsListingScreen = ({ navigation }) => {
   }, [])
 
   function listTutors() {
-    API.get('./general/tutors')
+    API.get('/general/tutors')
       .then(function (response) {
         // console.log(response.data.data);
         setTutors(response.data.data);

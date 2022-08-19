@@ -7,17 +7,16 @@ module.exports = StyleSheet.create ({
     flex: 1,
     alignItems: 'center',
     backgroundColor: '#FFFFFF'
-    //justifyContent: 'center',
   },
   img: {
-    height: height * 0.4,
+    height: height * 0.31,
     width: width * 0.85,
     resizeMode: 'contain',
     top: height * 0.06,
+    marginTop: height * 0.08
   },
   btnContainer: {
-    position: 'absolute',
-    top: height * 0.6,
+    marginTop: height * 0.1
   },
   btn: {
     height: height * 0.06,
@@ -26,7 +25,7 @@ module.exports = StyleSheet.create ({
     alignItems: 'center',
     justifyContent: 'center',
     margin: 10,
-    borderRadius: 20,
+    borderRadius: 20
   },
   btnText: {
     color: 'white',

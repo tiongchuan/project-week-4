@@ -2,22 +2,12 @@ import React from 'react'
 import {
   View,
   Text,
-  Image,
   TouchableOpacity,
-  TextInput,
   ScrollView,
-  FlatList,
-  SafeAreaView,
-  ActivityIndicator
 } from 'react-native'
 import styles from '../styles/myActivity.styles'
-import { useState, useEffect } from 'react'
-import API from '../services/API.service'
-
-
 
 export const MyActivityScreen = ({ navigation }) => {
-
 
   return (
 
