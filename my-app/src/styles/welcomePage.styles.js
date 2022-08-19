@@ -17,6 +17,7 @@ module.exports = StyleSheet.create ({
   p1:{
     // flex:1,
     fontSize: 50,
+    marginTop: 10
     //marginLeft:10,
     // justifyContent:'flex-start'
     // alignContent:'start',
@@ -26,7 +27,8 @@ module.exports = StyleSheet.create ({
   p2:{
     fontSize: 40,
     fontStyle:'italic',
-    fontFamily:'serif'
+    // fontFamily:'serif',
+    
   },
   img: {
     height: height / 2.6,
@@ -58,5 +60,22 @@ module.exports = StyleSheet.create ({
   },
   btnText: {
     color: '#FFFFFF'
+  },
+
+
+
+
+
+
+
+  texts: {
+    margin: 30,
+  },
+  text: {
+    margin: 5,
+    fontSize: 16
   }
+
+
+
 })

@@ -73,6 +73,15 @@ module.exports = StyleSheet.create({
     color: '#FFFFFF',
     //fontStyle: 'italic',
     fontWeight: 'bold'
+  },
+  flatContainer:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  flatlist:{
+    width: width,
+    height: height/10,
+    // alignItems:'center',
   }
-
 })

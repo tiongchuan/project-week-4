@@ -13,11 +13,45 @@ import React, { useState } from 'react'
 import { Switch } from 'react-native-switch'
 import signUpPic from '../assets/signUpPic.jpg'
 import styles from '../styles/signUp.styles'
+import API from '../config/api.js'
 
 export const SignUpScreen = ({ navigation }) => {
   
+  const [name, setName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+  const [confirmPassword, setconfirmPassword] = useState(null);
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState)
+
+  const handleSignUp =  async () => {
+
+    await API
+    .post ('/register', {
+      email: email, 
+      password: password,
+      //role: role,
+    })
+    .then (res => {     
+      if (res.data.status == "200") {
+        navigation.navigate('Welcome', {name: name, email: email});
+        console.log(res.data);
+        console.log("sign up successfully");
+      } 
+    })
+    .catch (e => {
+
+      // Check if email or password is empty
+      if (e.response.status == "500") {
+        const message = JSON.stringify(e.response.data.message);
+        alert(`${message}`);
+        // console.log(e.response.status);
+        // console.log(e.response.data);
+      }
+
+    });
+
+  };
 
   return(
     <ScrollView>
@@ -31,33 +65,33 @@ export const SignUpScreen = ({ navigation }) => {
             <View style = { styles.inputContainer }>
               <TextInput 
                 style = { styles.input } 
-                placeholder = 'username'
-                // value = { name }
-                // onChangeText = { handleName } 
+                placeholder = 'Username'
+                value = { name }
+                onChangeText = { setName } 
               />
               <TextInput 
                 style = {styles.input} 
-                placeholder = 'email' 
-                // value = { email }
-                //onChangeText = { handleEmail }
+                placeholder = 'Email' 
+                value = { email }
+                onChangeText = { setEmail }
                 />
-              <TextInput 
+              {/* <TextInput 
                 style = { styles.input } 
                 placeholder = 'mobile number' 
                 // value = { mobileNumber }
                 // onChangeText = { handleMobileNumber }
-                keyboardType = 'numeric' />
+                keyboardType = 'numeric' /> */}
               <TextInput 
                 style = {styles.input} 
                 placeholder = 'Enter password' 
-                // value = { password }
-                //onChangeText = { handlePassword }
+                value = { password }
+                onChangeText = { setPassword }
                 />
               <TextInput 
                 style = { styles.input } 
                 placeholder = 'Confirm password' 
-                // value = { confirmPassword }
-                //onChangeText = { handleConfirmPassword }
+                value = { confirmPassword }
+                onChangeText = { setconfirmPassword }
                 />
               <View style = { styles.toggle }>
                 <Text style = { styles.text }>I am a </Text>
@@ -81,7 +115,9 @@ export const SignUpScreen = ({ navigation }) => {
               </View>
               <TouchableOpacity
                 style = { styles.btn } 
-                onPress = {() => navigation.navigate( 'Login' )}>
+
+                onPress = { handleSignUp }>
+
                 <Text style = { styles.btnText }>Sign Up</Text>
               </TouchableOpacity>
             </View>
