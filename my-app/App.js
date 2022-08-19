@@ -5,16 +5,12 @@ import { MainScreen } from './src/screens/mainPage'
 import { SignUpScreen } from './src/screens/signUp';
 import { LoginScreen } from './src/screens/login';
 import { WelcomeScreen } from './src/screens/welcomePage';
-import { UserProfileScreen } from './src/screens/userProfile';
 import { TutorsListingScreen } from './src/screens/tutorsListing';
 import { MyActivityScreen } from './src/screens/myActivity';
 import { TutorProfileScreen } from './src/screens/tutorProfile';
 import { RequestTutorScreen } from './src/screens/requestTutor';
-
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
 
 // import Tabs from './src/navigation/tabs';
 
@@ -30,7 +26,7 @@ function Tabs() {
                 tabBarLabel: 'Profile',
                 tabBarActiveBackgroundColor: "#D9D9D9",
                 tabBarIcon: ({ size }) => (
-                    <MaterialCommunityIcons name="account" color="purple" size={size} />)
+                    <MaterialCommunityIcons name="account" color="#9D2427" size={size} />)
             }}
         />
       <Tab.Screen
@@ -40,7 +36,7 @@ function Tabs() {
           tabBarLabel: 'Search',
           tabBarActiveBackgroundColor: "#D9D9D9",
           tabBarIcon: ({ size }) => (
-            <MaterialCommunityIcons name="magnify" color="purple" size={size} />)
+            <MaterialCommunityIcons name="magnify" color="#9D2427" size={size} />)
         }}
       />
 
@@ -51,7 +47,7 @@ function Tabs() {
           tabBarLabel: 'Bookings',
           tabBarActiveBackgroundColor: "#D9D9D9",
           tabBarIcon: ({ size }) => (
-            <MaterialCommunityIcons name="bookmark" color="purple" size={size} />)
+            <MaterialCommunityIcons name="bookmark" color="#9D2427" size={size} />)
         }}
       />
 
