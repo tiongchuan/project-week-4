@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import { 
-  View, 
-  Text, 
+import {
+  View,
+  Text,
   Keyboard,
-  TextInput, 
-  ScrollView,
-  TouchableOpacity, 
-  KeyboardAvoidingView, 
-  TouchableWithoutFeedback
+  TextInput,
+  ScrollView, 
+  TouchableOpacity,
+  KeyboardAvoidingView,
+  TouchableWithoutFeedback,
 } from 'react-native'
 import dayjs from 'dayjs'
 import { Calendar } from 'react-native-calendars'
@@ -18,28 +18,24 @@ export const RequestTutorScreen = ({ navigation, route }) => {
 
   const [dayPress, setDayPress] = useState ()
   const [manageTimeSlot, setManageTimeSlot] = useState()
-  
   const onDayPress = ( day ) => {
     const dateString = dayjs( day.dateString ).format( 'DD/MM/YYYY' )
     setDayPress( dateString )
     console.log( dateString )
-  }  
+  }
   const date = dayPress? dayPress.toString () : ''
-
   const timeSlot = [
     '10:00 ~ 12:00',
     '13:00 ~ 15:00',
     '16:00 ~ 18:00',
     '19:00 ~ 21:00'
   ]
-
   const onSelectTimeSlot = ( selectedTimeSlot ) => {
     const timeSlot = selectedTimeSlot
       setManageTimeSlot( timeSlot )
       console.log( selectedTimeSlot )
     }
   const time = manageTimeSlot? manageTimeSlot : ''
-
   const pressConfirm = () => {
     alert( `Class on ${date} ${time}` )
     // setPopulate(prev => {
@@ -48,19 +44,18 @@ export const RequestTutorScreen = ({ navigation, route }) => {
     console.log(date, time)
     navigation.navigate( 'My Activity' )
   }
-
   return (
     <ScrollView>
-      <KeyboardAvoidingView 
-        style = { styles.container } 
+      <KeyboardAvoidingView
+        style = { styles.container }
         behavior= { Platform.OS === "ios" ? "padding" : "height" }>
         <TouchableWithoutFeedback onPress = { Keyboard.dismiss }>
           <View style = { styles.innerContainer }>
-            <Calendar 
+            <Calendar
               style = { styles.calendar }
-              onDayPress= { onDayPress }              
+              onDayPress= { onDayPress }
               enableSwipeMonths = { true }
-              theme = {{ 
+              theme = {{
                 calendarBackground: '#9D2427',
                 selectedDayBackgroundColor: 'white',
                 selectedDayTextColor: 'black',
@@ -82,13 +77,13 @@ export const RequestTutorScreen = ({ navigation, route }) => {
               }} />
             <View style = { styles.textsContainer }>
               <View style = { styles.texts }>
-                <Text 
+                <Text
                   style = { styles.text }>
-                  Selected Date: { date } 
+                  Selected Date: { date }
                 </Text>
                 <View style = { styles.dropBox }>
                   <Text style = { styles.text }>Time:</Text>
-                  <SelectDropdown 
+                  <SelectDropdown
                     defaultButtonText = 'select time'
                     dropdownStyle = { styles.dropdownStyle }
                     buttonStyle = { styles.dropdownButtonStyle }
@@ -109,9 +104,9 @@ export const RequestTutorScreen = ({ navigation, route }) => {
               </View>
             </View>
             <View style = { styles.inputContainer }>
-              <TextInput 
-              style = { styles.input } 
-              placeholder = "Additional Request..." 
+              <TextInput
+              style = { styles.input }
+              placeholder = "Additional Request..."
               multiline = { true }
               numberOfLines = { 5 }
               onChangeText = {( text ) => { text }}/>
@@ -122,7 +117,7 @@ export const RequestTutorScreen = ({ navigation, route }) => {
               ))}
             </View> */}
             <View style = { styles.btnContainer }>
-              <TouchableOpacity 
+              <TouchableOpacity
                 style = { styles.btn }
                 onPress = { pressConfirm }>
                 <Text style = { styles.btnText }>Confirm</Text>

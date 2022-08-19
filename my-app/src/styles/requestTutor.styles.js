@@ -22,8 +22,8 @@ module.exports = StyleSheet.create ({
     //justifyContent: 'space-evenly',
     shadowColor: "#000",
     shadowOffset: {
-	    width: 0,
-	    height: 12,
+      width: 0,
+      height: 12,
     },
     shadowOpacity: 0.58,
     shadowRadius: 16.00,
@@ -50,7 +50,7 @@ module.exports = StyleSheet.create ({
     borderRadius: 20
   },
   dropdownButtonTextStyle: {
-    color:'#F5F5F5', 
+    color:'#F5F5F5',
     fontSize: 12
   },
   dropdownStyle: {

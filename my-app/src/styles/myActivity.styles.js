@@ -74,6 +74,8 @@ module.exports = StyleSheet.create({
     //fontStyle: 'italic',
     fontWeight: 'bold'
   },
+
+
   flatContainer:{
     flex:1,
     justifyContent:'center',
@@ -84,4 +86,5 @@ module.exports = StyleSheet.create({
     height: height/10,
     // alignItems:'center',
   }
+
 })

@@ -4,12 +4,12 @@ import {
   Image,
   Keyboard,
   TextInput,
+  ScrollView,
   TouchableOpacity,
   KeyboardAvoidingView,
   TouchableWithoutFeedback,
-  ScrollView
 } from 'react-native'
-import React, {useEffect, useState} from 'react'
+import React, { useState } from 'react'
 import styles from '../styles/login.styles'
 import loginPic from '../assets/loginPic.jpg'
 import API from '../config/api.js'
@@ -97,6 +97,6 @@ export const LoginScreen = ({ navigation }) => {
           </View>
         </TouchableWithoutFeedback>
       </KeyboardAvoidingView>
-      </ScrollView>
+    </ScrollView>
   )
 }
