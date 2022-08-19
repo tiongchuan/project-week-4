@@ -14,7 +14,7 @@ import { Calendar } from 'react-native-calendars'
 import styles from '../styles/requestTutor.styles'
 import SelectDropdown from 'react-native-select-dropdown'
 
-export const RequestTutorScreen = ({ navigation }) => {
+export const RequestTutorScreen = ({ navigation, route }) => {
 
   const [dayPress, setDayPress] = useState ()
   const [manageTimeSlot, setManageTimeSlot] = useState()
@@ -104,7 +104,7 @@ export const RequestTutorScreen = ({ navigation }) => {
                     }}
                   />
                 </View>
-                <Text style = { styles.text }>Total Price: 300SGD</Text>
+                <Text style = { styles.text }>Total Price: {(route.params.hourlyrate)*2}</Text>
                 <Text style = { styles.text }>Additional Request:</Text>
               </View>
             </View>
