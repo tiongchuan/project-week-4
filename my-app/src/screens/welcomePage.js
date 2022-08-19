@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native'
+import { View, Text, Image, TouchableOpacity } from 'react-native'
 import styles from '../styles/welcomePage.styles'
 import boy from '../assets/Boy.jpg'
 import profileImg from '../assets/profileImg.jpg'
@@ -13,9 +13,7 @@ export const WelcomeScreen = ({ navigation, route }) => {
 
   return (
 
-    <ScrollView 
-    // style = { styles.container }
-    >
+    <View style = { styles.container }>
 
       <Text style={styles.p1}>Welcome </Text>
       <Text style={styles.p2}> { route.params.email } </Text>
@@ -51,6 +49,6 @@ export const WelcomeScreen = ({ navigation, route }) => {
       </View>
 
    
-    </ScrollView>
+    </View>
   )
 }
