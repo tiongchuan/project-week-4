@@ -13,16 +13,17 @@ module.exports = StyleSheet.create ({
   img: {
     height: height / 2.6,
     width: width / 1.2,
-    //resizeMode: 'contain',
-    marginTop: 20,
+    marginTop: height * 0.05,
     borderColor: 'gray',
     borderRadius: 200
   },
   texts: {
-    margin: 30
+    margin: height * 0.03
   },
   text: {
-    fontSize: 15
+    fontSize: 15,
+    fontWeight: 'bold',
+    margin: 2
   },
   btn: {
     height: 43,
@@ -31,7 +32,8 @@ module.exports = StyleSheet.create ({
     alignItems: 'center',
     justifyContent: 'center',
     margin: 20,
-    borderRadius: 20
+    borderRadius: 20,
+    marginTop: height * 0.01
   },
   btnText: {
     color: '#FFFFFF'

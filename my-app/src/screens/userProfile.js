@@ -3,8 +3,6 @@ import { View, Text, Image, TouchableOpacity, Button } from 'react-native'
 import profileImg from '../assets/profileImg.jpg'
 import styles from '../styles/userProfile.styles'
 
-
-
 export const UserProfileScreen = ({ navigation, route }) => {
 
   return (

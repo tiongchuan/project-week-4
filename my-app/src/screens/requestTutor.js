@@ -100,7 +100,6 @@ export const RequestTutorScreen = ({ navigation, route }) => {
                   />
                 </View>
                 <Text style = { styles.text }>Total Price: {(route.params.hourlyrate)*2}</Text>
-                <Text style = { styles.text }>Additional Request:</Text>
               </View>
             </View>
             <View style = { styles.inputContainer }>
