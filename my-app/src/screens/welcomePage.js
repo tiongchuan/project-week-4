@@ -27,7 +27,7 @@ export const WelcomeScreen = ({ navigation, route }) => {
         <Text style = { styles.text }>Mobile number: 94582165 </Text>
       </View>
 
-      <View style = {styles.btns }>
+      {/* <View style = {styles.btns }>
         <TouchableOpacity 
           style = { styles.btn }
           onPress = {() => navigation.navigate( 'My profile', {name: route.params.name, email: route.params.email} )}
@@ -46,7 +46,7 @@ export const WelcomeScreen = ({ navigation, route }) => {
         >
           <Text style = { styles.btnText }>My activity</Text>
         </TouchableOpacity>
-      </View>
+      </View> */}
 
    
     </View>
