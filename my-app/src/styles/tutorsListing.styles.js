@@ -50,8 +50,7 @@ module.exports = StyleSheet.create({
   text0:{
     flex:2,
     justifyContent:'center',
-    paddingHorizontal:width/20
-
+    paddingHorizontal:width / 20
   },
   text1: {
     color: '#FFFFFF',
