@@ -34,7 +34,7 @@ export const SignUpScreen = ({ navigation }) => {
     })
     .then ( res => {     
       if ( res.data.status == "200" ) {
-        navigation.navigate( 'Welcome', { name: name, email: email });
+        navigation.navigate('Tabs', {screen:'Welcome', params:{email:email}});
         console.log( res.data );
         console.log( "sign up successfully" );
       } 
@@ -95,7 +95,7 @@ export const SignUpScreen = ({ navigation }) => {
                   switchRightPx = { 5 }
                   circleBorderWidth = { 0 }
                   switchBorderRadius = { 10 }
-                  activeText = { 'Student' }
+                  activeText = { 'User' }
                   inActiveText = { 'Tutor' }
                   backgroundActive = { 'gray' }
                   backgroundInactive = { 'gray' }

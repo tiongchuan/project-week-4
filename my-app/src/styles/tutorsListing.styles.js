@@ -29,7 +29,7 @@ module.exports = StyleSheet.create({
   listing: {
     flex:1,
     //position: 'absolute',
-    height: height * 0.11,
+    height: height * 0.14,
     width: width * 0.88,
     backgroundColor: '#9D2427',
     marginTop: 18,
@@ -56,10 +56,11 @@ module.exports = StyleSheet.create({
   text1: {
     color: '#FFFFFF',
     fontWeight: 'bold',
-    fontSize: 15
+    fontSize: 13
   },
   text2: {
-    color: '#FFFFFF'
+    color: '#FFFFFF',
+    fontSize: 12
   },
   img: {
     // flex:1,
@@ -69,7 +70,7 @@ module.exports = StyleSheet.create({
     borderRadius: 60
   },
   price: {
-    fontSize: 25,
+    fontSize: 23,
     color: '#FFFFFF',
     fontWeight: 'bold',
     margin: 8
@@ -91,7 +92,6 @@ module.exports = StyleSheet.create({
     fontSize: 30,
     textAlign: "center",
     height: 100,
-    backgroundColor: '#9D2427',
     marginTop: 18,
     borderRadius: 20,
     padding: 25,
