@@ -8,17 +8,20 @@ import profileImg from '../assets/profileImg.jpg'
 
 export const WelcomeScreen = ({ navigation, route }) => {
 
+
+    // console.log(route);
+
   return (
 
     <View style = { styles.container }>
 
       <Text style={styles.p1}>Welcome </Text>
-      <Text style={styles.p2}> { route.params.name } </Text>
+      <Text style={styles.p2}> { route.params.email } </Text>
 
       <Image style = { styles.img } source = { boy } />
 
       <View style = { styles.texts }> 
-   <Text style = { styles.text }>Name: { route.params.name }</Text>
+   {/* <Text style = { styles.text }>Name: { route.params.name }</Text> */}
         <Text style = { styles.text }>Age: 20 </Text>
         <Text style = { styles.text }>E-mail: { route.params.email } </Text>
         <Text style = { styles.text }>Mobile number: 94582165 </Text>

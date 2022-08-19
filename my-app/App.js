@@ -25,9 +25,9 @@ export default function App() {
         <Stack.Screen name = 'Sign Up' component = { SignUpScreen }/>
         <Stack.Screen name = 'Login' component = { LoginScreen }/>
         <Stack.Screen name = 'Welcome' component = { Tabs }/>
-        <Stack.Screen name = 'My profile' component = { UserProfileScreen }/>
         {/* <Stack.Screen name = 'My profile' component = { UserProfileScreen }/> */}
-        <Stack.Screen name = 'Tutors' component = { TutorsListingScreen }/>
+        {/* <Stack.Screen name = 'My profile' component = { UserProfileScreen }/> */}
+        {/* <Stack.Screen name = 'Tutors' component = { TutorsListingScreen }/> */}
         {/* <Stack.Screen name = 'My Activity' component = { MyActivityScreen }/> */}
         <Stack.Screen name = 'Tutor profile' component = { TutorProfileScreen }/>
         <Stack.Screen name = 'Request Tutor' component = { RequestTutorScreen }/>

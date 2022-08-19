@@ -28,11 +28,12 @@ export const LoginScreen = ({ navigation }) => {
         })
         .then (res => {
 
-          console.log(res.data);
+          // console.log(res.data);
+
 
           if (res.data.status == "200") {
-            navigation.navigate('Welcome', {email: email} );
-            console.log(res.message);
+            navigation.navigate('Welcome', {screen:'Welcome',params:{email:email}});
+            // console.log(res.message);
           }
         })
         .catch (e => {
