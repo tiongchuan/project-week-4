@@ -23,7 +23,7 @@ export const TutorProfileScreen = ({ navigation, route }) => {
       
       <TouchableOpacity 
         style = { styles.btn }
-        onPress = {() => navigation.navigate( 'Request Tutor' )}
+        onPress = {() => navigation.navigate( 'Request Tutor', {hourlyrate: route.params.item.hourlyRate} )}
       >
         <Text style = { styles.btnText }>Request</Text>
       </TouchableOpacity>
