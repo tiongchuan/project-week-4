@@ -5,7 +5,6 @@ import {
   Image,
   TouchableOpacity,
   TextInput,
-  ScrollView,
   SafeAreaView,
   FlatList,
   ActivityIndicator,
@@ -13,7 +12,6 @@ import {
 import styles from '../styles/tutorsListing.styles'
 import profileImg from '../assets/profileImg.jpg'
 import API from '../config/api.js'
-
 
 export const TutorsListingScreen = ({ navigation }) => {
 
@@ -60,10 +58,7 @@ export const TutorsListingScreen = ({ navigation }) => {
     );
   };
 
-  // console.log(isLoading);
-
   return (
-
     <SafeAreaView style={styles.listings}>
       <TextInput
         style={styles.search}
@@ -71,9 +66,11 @@ export const TutorsListingScreen = ({ navigation }) => {
         placeholder='Search'
         underlineColorAndroid="transparent"
         onChangeText={(text) => searchFilter(text)}
-      ></TextInput>
+      />
       {isLoading ? <View style={styles.spinner}><ActivityIndicator size='large' color='#9D2427' /></View> :
+        
         <FlatList
+          showsVerticalScrollIndicator = {false}
           data={filterTutor}
           renderItem={({ item }) => (
             <TouchableOpacity style={styles.listing}
@@ -86,15 +83,6 @@ export const TutorsListingScreen = ({ navigation }) => {
               <Text style={styles.price}>${item.hourlyRate}</Text>
             </TouchableOpacity>
           )}
-          // ListHeaderComponent={() => (
-          //   <Text style={styles.header}>
-          //     List of Tutors
-          //   </Text>
-          // )}
-          // ListFooterComponent={() => (
-          //   <Text style={styles.footer}>
-          //     End of List</Text>
-          // )}
           ListEmptyComponent={myListEmpty}
         />
       }

@@ -4,12 +4,12 @@ import {
   Image,
   Keyboard,
   TextInput,
+  ScrollView,
   TouchableOpacity,
   KeyboardAvoidingView,
   TouchableWithoutFeedback,
-  ScrollView
 } from 'react-native'
-import React, {useEffect, useState} from 'react'
+import React, { useState } from 'react'
 import styles from '../styles/login.styles'
 import loginPic from '../assets/loginPic.jpg'
 import API from '../config/api.js'
@@ -28,17 +28,14 @@ export const LoginScreen = ({ navigation }) => {
         })
         .then (res => {
 
-          // console.log(res.data);
-
-
           if (res.data.status == "200") {
-            navigation.navigate('Welcome', {screen:'Welcome',params:{email:email}});
+            navigation.navigate('Tabs', {screen:'Welcome',params:{email:email}});
             // console.log(res.message);
           }
         })
         .catch (e => {
 
-          // Check if email or password is empited
+          // Check if email or password is empty
           if (e.response.status == "500") {
             const message = JSON.stringify(e.response.data.message);
             alert(`${message}`);
@@ -97,6 +94,6 @@ export const LoginScreen = ({ navigation }) => {
           </View>
         </TouchableWithoutFeedback>
       </KeyboardAvoidingView>
-      </ScrollView>
+    </ScrollView>
   )
 }

@@ -29,9 +29,9 @@ module.exports = StyleSheet.create({
   },
   listing: {
     //position: 'absolute',
-    height: 100,
+    height: height * 0.11,
     backgroundColor: '#9D2427',
-    marginTop: 18,
+    marginTop: height * 0.02,
     borderRadius: 20,
     padding: 25,
     flexDirection: 'row',
@@ -39,7 +39,7 @@ module.exports = StyleSheet.create({
     alignItems: 'center'
   },
   status: {
-    fontSize: 20,
+    fontSize: 18,
     color: '#FFFFFF',
     //fontStyle: 'italic',
     fontWeight: 'bold'
@@ -52,36 +52,5 @@ module.exports = StyleSheet.create({
   text2: {
     color: '#FFFFFF',
     fontWeight: 'normal',
-  },
-  homebtn: {
-    // height: 50,
-    // width: 150,
-    backgroundColor: '#9D2427',
-    //marginTop: 10,
-    //marginBottom:10,
-    //marginHorizontal:'30%',
-    borderRadius: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginHorizontal: width / 3,
-    //position: 'absolute',
-    // flexDirection: 'row',
-    padding: 15,
-  },
-  hometext: {
-    fontSize: 10,
-    color: '#FFFFFF',
-    //fontStyle: 'italic',
-    fontWeight: 'bold'
-  },
-  flatContainer:{
-    flex:1,
-    justifyContent:'center',
-    alignItems:'center'
-  },
-  flatlist:{
-    width: width,
-    height: height/10,
-    // alignItems:'center',
   }
 })

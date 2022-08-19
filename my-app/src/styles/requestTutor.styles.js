@@ -16,14 +16,14 @@ module.exports = StyleSheet.create ({
   },
   calendar: {
     width: width / 1.2,
-    marginTop: 20,
+    marginTop: height * 0.04,
     height: 370,
     borderRadius: 20,
     //justifyContent: 'space-evenly',
     shadowColor: "#000",
     shadowOffset: {
-	    width: 0,
-	    height: 12,
+      width: 0,
+      height: 12,
     },
     shadowOpacity: 0.58,
     shadowRadius: 16.00,
@@ -50,7 +50,7 @@ module.exports = StyleSheet.create ({
     borderRadius: 20
   },
   dropdownButtonTextStyle: {
-    color:'#F5F5F5', 
+    color:'#F5F5F5',
     fontSize: 12
   },
   dropdownStyle: {
@@ -58,7 +58,7 @@ module.exports = StyleSheet.create ({
     backgroundColor: '#F5F5F5',
   },
   input: {
-    height: height / 6,
+    height: height / 13,
     width: width / 1.2,
     marginTop: 5,
     borderWidth: 2,
@@ -78,7 +78,7 @@ module.exports = StyleSheet.create ({
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 20
+    marginTop: height * 0.02
   },
   btnText: {
     color: 'white',

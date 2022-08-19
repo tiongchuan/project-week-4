@@ -7,7 +7,6 @@ module.exports = StyleSheet.create ({
     flex: 1,
     alignItems: 'center',
     backgroundColor: '#FFFFFF',
-    //justifyContent: 'center',
   },
   innerContainer: {
     padding: 0,
@@ -21,7 +20,7 @@ module.exports = StyleSheet.create ({
   },
   inputContainer: {
     alignItems: 'center',
-    top: height * 0.06,
+    top: height * 0.02,
   },
   input: {
     justifyContent: 'center',
@@ -47,7 +46,7 @@ module.exports = StyleSheet.create ({
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 30,
+    marginTop: height * 0.02,
   },
   btnText: {
     color: 'white',

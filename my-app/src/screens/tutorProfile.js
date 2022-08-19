@@ -3,10 +3,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native'
 import profileImg from '../assets/profileImg.jpg'
 import styles from '../styles/tutorProfile.styles'
 
-
 export const TutorProfileScreen = ({ navigation, route }) => {
-
-  // console.log(route.params.item);
 
   return (
     <View style = { styles.container }>
@@ -23,7 +20,7 @@ export const TutorProfileScreen = ({ navigation, route }) => {
       
       <TouchableOpacity 
         style = { styles.btn }
-        onPress = {() => navigation.navigate( 'Request Tutor' )}
+        onPress = {() => navigation.navigate( 'Request Tutor', {hourlyrate: route.params.item.hourlyRate} )}
       >
         <Text style = { styles.btnText }>Request</Text>
       </TouchableOpacity>

@@ -6,37 +6,31 @@ module.exports = StyleSheet.create({
   container: {
     flex: 1,
     //alignItems: 'center',
-    backgroundColor: '#D9D9D9',
+    backgroundColor: '##E4E3E3'
     //justifyContent: 'space-evenly'
     // paddingLeft: 30
   },
   search: {
     backgroundColor: '#FFFFFF',
-
-    // width: width / 1.2,
-
     height: 40,
+    width: width * 0.88,
     borderRadius: 20,
     padding: 10,
-    // top: 20,
-    // marginBottom: 10,
-    borderColor:'#009688',
+    borderColor:'#D9D9D9',
     borderWidth: 1,
-    margin: 10,
-    // paddingLeft: 20,
+    margin: 10
   },
   listings: {
     flex: 1,
     height: height,
-
-    // width: width / 1.2,
-    // marginTop: 20,
-
+    width: width,
+    alignItems: 'center',
   },
   listing: {
     flex:1,
     //position: 'absolute',
-    height: 100,
+    height: height * 0.14,
+    width: width * 0.88,
     backgroundColor: '#9D2427',
     marginTop: 18,
     borderRadius: 20,
@@ -44,12 +38,11 @@ module.exports = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    shadowColor: "#000",
-    shadowOffset: {
-
-      width: 8,
-      height: 6,
-    },
+    // shadowColor: "#000",
+    // shadowOffset: {
+    //   width: 8,
+    //   height: 6,
+    // },
     shadowOpacity: 0.46,
     shadowRadius: 11.14,
     elevation: 17
@@ -63,10 +56,11 @@ module.exports = StyleSheet.create({
   text1: {
     color: '#FFFFFF',
     fontWeight: 'bold',
-    fontSize: 15
+    fontSize: 13
   },
   text2: {
-    color: '#FFFFFF'
+    color: '#FFFFFF',
+    fontSize: 12
   },
   img: {
     // flex:1,
@@ -76,11 +70,10 @@ module.exports = StyleSheet.create({
     borderRadius: 60
   },
   price: {
-    flex:1,
-    fontSize: 30,
+    fontSize: 23,
     color: '#FFFFFF',
-    //fontStyle: 'italic',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    margin: 8
   },
   header: {
     fontSize: 30,
@@ -99,7 +92,6 @@ module.exports = StyleSheet.create({
     fontSize: 30,
     textAlign: "center",
     height: 100,
-    backgroundColor: '#9D2427',
     marginTop: 18,
     borderRadius: 20,
     padding: 25,
