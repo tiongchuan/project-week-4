@@ -29,7 +29,7 @@ module.exports = StyleSheet.create({
   },
   listing: {
     //position: 'absolute',
-    height: height * 0.1,
+    height: height * 0.11,
     backgroundColor: '#9D2427',
     marginTop: height * 0.02,
     borderRadius: 20,
@@ -39,7 +39,7 @@ module.exports = StyleSheet.create({
     alignItems: 'center'
   },
   status: {
-    fontSize: 20,
+    fontSize: 18,
     color: '#FFFFFF',
     //fontStyle: 'italic',
     fontWeight: 'bold'
