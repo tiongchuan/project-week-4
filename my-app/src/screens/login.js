@@ -31,7 +31,7 @@ export const LoginScreen = ({ navigation }) => {
           console.log(res.data);
 
           if (res.data.status == "200") {
-            navigation.navigate('Welcome', {email: email} );
+            navigation.navigate('Welcome', {screen: 'Welcome', params:{email: email}} );
             console.log(res.message);
           }
         })

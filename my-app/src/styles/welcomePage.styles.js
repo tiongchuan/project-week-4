@@ -25,8 +25,7 @@ module.exports = StyleSheet.create ({
   },
   p2:{
     fontSize: 40,
-    fontStyle:'italic',
-    fontFamily:'serif'
+    fontStyle:'italic'
   },
   img: {
     height: height / 2.6,
