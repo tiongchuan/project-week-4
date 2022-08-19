@@ -6,37 +6,31 @@ module.exports = StyleSheet.create({
   container: {
     flex: 1,
     //alignItems: 'center',
-    backgroundColor: '#D9D9D9',
+    backgroundColor: '##E4E3E3'
     //justifyContent: 'space-evenly'
     // paddingLeft: 30
   },
   search: {
     backgroundColor: '#FFFFFF',
-
-    // width: width / 1.2,
-
     height: 40,
+    width: width * 0.88,
     borderRadius: 20,
     padding: 10,
-    // top: 20,
-    // marginBottom: 10,
-    borderColor:'#009688',
+    borderColor:'#D9D9D9',
     borderWidth: 1,
-    margin: 10,
-    // paddingLeft: 20,
+    margin: 10
   },
   listings: {
     flex: 1,
     height: height,
-
-    // width: width / 1.2,
-    // marginTop: 20,
-
+    width: width,
+    alignItems: 'center',
   },
   listing: {
     flex:1,
     //position: 'absolute',
-    height: 100,
+    height: height * 0.1,
+    width: width * 0.88,
     backgroundColor: '#9D2427',
     marginTop: 18,
     borderRadius: 20,
@@ -44,12 +38,11 @@ module.exports = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    shadowColor: "#000",
-    shadowOffset: {
-
-      width: 8,
-      height: 6,
-    },
+    // shadowColor: "#000",
+    // shadowOffset: {
+    //   width: 8,
+    //   height: 6,
+    // },
     shadowOpacity: 0.46,
     shadowRadius: 11.14,
     elevation: 17

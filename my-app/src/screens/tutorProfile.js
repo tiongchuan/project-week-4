@@ -3,10 +3,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native'
 import profileImg from '../assets/profileImg.jpg'
 import styles from '../styles/tutorProfile.styles'
 
-
 export const TutorProfileScreen = ({ navigation, route }) => {
-
-  // console.log(route.params.item);
 
   return (
     <View style = { styles.container }>
