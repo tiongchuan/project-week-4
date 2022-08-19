@@ -69,10 +69,10 @@ module.exports = StyleSheet.create({
     borderRadius: 60
   },
   price: {
-    fontSize: 28,
+    fontSize: 25,
     color: '#FFFFFF',
-    //fontStyle: 'italic',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    margin: 8
   },
   header: {
     fontSize: 30,
