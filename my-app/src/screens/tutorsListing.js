@@ -82,7 +82,7 @@ export const TutorsListingScreen = ({ navigation }) => {
                 <Text style={styles.text1}>{item.name}</Text>
                 <Text style={styles.text2}>Experience: {item.experience} yrs</Text>
               </View>
-              <Text style={styles.price}>S${item.hourlyRate}</Text>
+              <Text style={styles.price}>${item.hourlyRate}</Text>
             </TouchableOpacity>
           )}
           // ListHeaderComponent={() => (

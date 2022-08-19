@@ -29,7 +29,7 @@ module.exports = StyleSheet.create({
   listing: {
     flex:1,
     //position: 'absolute',
-    height: height * 0.11,
+    height: height * 0.12,
     width: width * 0.88,
     backgroundColor: '#9D2427',
     marginTop: 18,
@@ -50,8 +50,7 @@ module.exports = StyleSheet.create({
   text0:{
     flex:2,
     justifyContent:'center',
-    paddingHorizontal:width/20
-
+    paddingHorizontal:width / 20
   },
   text1: {
     color: '#FFFFFF',

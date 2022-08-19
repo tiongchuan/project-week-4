@@ -5,11 +5,18 @@ const { height, width } = Dimensions.get( 'window' )
 module.exports = StyleSheet.create ({
   container: {
     flex: 1,
-    alignItems: 'center',
+    //alignItems: 'center',
     backgroundColor: '#FFFFFF'
   },
+  btn: {
+    alignItems: 'flex-end',
+    margin: 5
+  },
+  container1: {
+    alignItems: 'center'
+  },
   welcomeTexts: {
-    marginTop: height * 0.05
+    marginTop: height * 0.01
   },
   p1:{
     fontSize: 50
